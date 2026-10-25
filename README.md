@@ -4,7 +4,7 @@ Riešenie praktickej úlohy (Zadanie A) do výberového konania na pozíciu
 Junior AI Developer v Clientelo.
 
 > **Stav:** rozpracované. Hotové: príprava repozitára, pravidlá pre AI
-> (`CLAUDE.md`), schéma v0.2, návrh plánu v1 (čaká na schválenie).
+> (`CLAUDE.md`), schéma v0.2, plán pilotu v2 (čaká na schválenie), skripty na kontrolu citácií a súhrn ručnej kontroly.
 > Zber dát ešte nezačal.
 
 ## Obsah repozitára
@@ -23,7 +23,7 @@ Junior AI Developer v Clientelo.
 
 ## 1. Plán
 
-Návrh: [`plan/research-plan.md`](plan/research-plan.md) (v1, čaká na schválenie).
+Návrh: [`plan/research-plan.md`](plan/research-plan.md) (v2, čaká na schválenie).
 
 _TODO: zhrnutie po schválení._
 
