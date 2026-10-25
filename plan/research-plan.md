@@ -79,8 +79,14 @@ nie investičnú aktivitu. Aktivitu dokladá iba konkrétna investícia.
 Kandidátov zostavím z verejných zoznamov: členovia českej a slovenskej
 asociácie VC/PE (CVCA, SLOVCA), portfóliá verejných fondov fondov a články
 s prehľadmi investorov. Či sú tieto zoznamy verejne dostupné a čo
-obsahujú, si overím ako prvé. Pri každom kandidátovi si zapíšem, odkiaľ
+obsahujú, si overím ako prvé. Predbežné zistenia sú v
+`plan/zdroje-kandidatov.md`. Podľa nich samotné asociácie pravdepodobne
+nestačia na 25 VC investorov. Pri každom kandidátovi si zapíšem, odkiaľ
 pochádza.
+
+Ak sa nenájde 25 VC investorov s verejne doloženou investíciou, zmenším
+vzorku alebo pridám príbuzný segment (napr. VC zo susedných krajín
+investujúce v CZ/SK) a v metodike to uvediem.
 
 Ak bude kandidátov viac ako 25, vyberiem ich tak, aby vzorka neobsahovala
 iba najznámejšie fondy (napr. každý druhý v abecednom poradí). Výber
@@ -121,7 +127,7 @@ Zhrnutie a poučenia zapíšem do `results/` a do README.
 |---|---|
 | **Povinné** (bez nich sa záznam nezaradí) | názov, web alebo register, typ, krajina, aspoň jedna investícia v okne |
 | **Dôležité** (ak sú verejné) | sektory, fázy, výška jednej investície (ticket), veľkosť fondu, kapitál v správe (AUM) |
-| **Ak sa nájdu** | disponibilný kapitál, ďalšie investície, súvisiace fondy |
+| **Ak sa nájdu** | ďalšie investície, súvisiace fondy (v poznámke) |
 
 Finančné údaje sú najrizikovejšie. Tri pravidlá, na ktoré si dám pozor:
 veľkosť kola nie je výška investície fondu, súčet fondov nie je AUM a výška
@@ -211,7 +217,8 @@ Vedome ich v pilote nerobím. Uvádzam ich iba ako smer, nie ako plán:
 
 ## 11. Otvorené otázky
 
-1. Segment CZ/SK VC namiesto USA: potvrdiť.
-2. Sú členské zoznamy CVCA a SLOVCA verejné a použiteľné? Overiť v kroku 1.
-3. Zjednodušiť `data/schema.md` pre pilot? Verzia 0.2 obsahuje polia, ktoré
-   pilot nevyužije (napr. úrovne zdrojov, nezávislosť dôkazov).
+1. Segment CZ/SK VC: potvrdený, podmienkou je dostatok investorov
+   s verejnými údajmi.
+2. Zoznamy CVCA a SLOVCA: predbežne verejné, počet VC investorov v nich
+   pravdepodobne nestačí. Treba otvoriť priamo (`plan/zdroje-kandidatov.md`).
+3. Schéma: zjednodušená na v0.3.
