@@ -3,9 +3,9 @@
 Zapisovať priebežne, hneď keď na chybu narazím. Slúži ako podklad pre časť
 „Ako som pracoval s AI“ v README.
 
-| Dátum | Krok | Čo AI urobila | Ako som to zistil | Oprava / zmena postupu |
-|---|---|---|---|---|
-| | | | | |
+| Dátum | Krok / súbor | Typ chyby | Čo AI tvrdila | Kto zistil (človek / skript / agent) | Ako sa to zistilo | Oprava / zmena postupu |
+|---|---|---|---|---|---|---|
+| | | | | | | |
 
 ## Typy chýb (dopĺňať)
 
