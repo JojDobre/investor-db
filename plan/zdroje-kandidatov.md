@@ -1,24 +1,29 @@
 # Zdroje kandidátov: predbežné zistenia
 
-**Stav:** predbežné, **neoverené**. Dátum: 2026-10-25.
+**Stav:** overené priamo na weboch asociácií 2026-10-26. Pôvodné
+predbežné zistenia z 2026-10-25 (iba z vyhľadávania) sú nižšie ponechané
+kvôli histórii. Kandidáti sú v `data/raw/candidates.csv`.
 
-Weby `cvca.cz` a `slovca.sk` boli z cloudového prostredia, v ktorom som
-pracoval s Claude Code, zablokované (sieťové pravidlá prostredia). Zistenia
-nižšie preto pochádzajú **iba z výsledkov webového vyhľadávania** (úryvky
-a súhrny), nie z priameho prečítania stránok. Pred použitím ich treba
-otvoriť priamo a doplniť stĺpec „Overené“.
+## Zhrnutie (overené 2026-10-26)
 
-## Zhrnutie
+| Zdroj | Verejný? | Čo obsahuje | Predbežne VC |
+|---|---|---|---|
+| SLOVCA, riadni členovia (https://www.slovca.sk/sk/riadni-clenovia.html) | áno | 12 riadnych členov (počet potvrdený) | 3 VC?, 4 nejasné, zvyšok PE alebo dlh |
+| CVCA, riadni členovia (https://cvca.cz/en/category/full-members/) | áno | 26 riadnych členov a 1 čestný; profily uvádzajú typ investície, ticket a objem fondov (zdroj typu `other`) | 7 VC?, 3 nejasné, zvyšok PE alebo dlh |
+| Spolu bez duplicít | | 33 kandidátov (6 firiem je v oboch asociáciách) | **10 VC?, 7 nejasných** |
 
-| Zdroj | Verejný? | Čo obsahuje | Relevantné pre VC | Overené |
-|---|---|---|---|---|
-| SLOVCA, riadni členovia | podľa vyhľadávania áno, každý člen má vlastnú stránku | 12 riadnych členov, pridružení členovia (banky, poradcovia, kancelárie) | odhadom 4–6 z 12, zvyšok PE, dlhové fondy, verejné fondy | nie |
-| CVCA, riadni členovia | podľa vyhľadávania áno | počet sa v zdrojoch líši (pozri nižšie) | neznáme | nie |
+„Predbežne VC“ je odhad podľa profilu v asociácii, nie klasifikácia.
+Klasifikácia sa robí až po overení na weboch investorov.
 
-**Predbežný záver:** samotné členské zoznamy asociácií pravdepodobne
-**nestačia na 25 VC investorov**. Mnohí členovia sú PE alebo dlhové fondy
-a pridružení členovia nie sú investori (banky, advokátske kancelárie,
-poradcovia, teda pravidlo V2). Bude treba doplniť alternatívne zdroje.
+**Záver:** asociácie dávajú najviac 17 kandidátov s možným VC profilom.
+Na 25 overených VC investorov to nestačí; treba alternatívne zdroje (nižšie)
+alebo menšiu vzorku.
+
+Technická poznámka: `cvca.cz` neposiela úplný reťazec certifikátov
+Let's Encrypt (chýba medzicertifikát YR1). Pri sťahovaní som chýbajúce
+medzicertifikáty doplnil z letsencrypt.org; overovanie TLS zostáva zapnuté.
+
+## Pôvodné predbežné zistenia (2026-10-25, iba z vyhľadávania)
 
 ## SLOVCA
 

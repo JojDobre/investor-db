@@ -1,0 +1,34 @@
+kandidat,zdroj,url_zdroja,pristup,predbezny_segment,stav,poznamka
+Stratum Partners,CVCA riadni clenovia,https://cvca.cz/en/category/full-members/,2026-10-26,PE,neoverene,profil: growth equity / buyouts
+Thein,CVCA riadni clenovia,https://cvca.cz/en/category/full-members/,2026-10-26,PE,neoverene,profil: LBO / growth capital
+Tensor Ventures,CVCA riadni clenovia,https://cvca.cz/en/category/full-members/,2026-10-26,VC?,neoverene,profil: deeptech
+CVI,CVCA aj SLOVCA,https://cvca.cz/en/category/full-members/,2026-10-26,iné,neoverene,profil: direct lending / mezzanine; adresa Varšava
+Espira Investments,CVCA riadni clenovia,https://cvca.cz/en/category/full-members/,2026-10-26,PE,neoverene,profil: growth financing / MBO
+KAYA VC,CVCA riadni clenovia,https://cvca.cz/en/category/full-members/,2026-10-26,VC?,neoverene,profil bez typu investície
+EVERITA Capital,CVCA riadni clenovia,https://cvca.cz/en/category/full-members/,2026-10-26,PE,neoverene,profil: private equity – growth capital
+Depo Ventures,CVCA riadni clenovia,https://cvca.cz/en/category/full-members/,2026-10-26,VC?,test: zaradeny (navrh agenta),data/raw/cz-depo-ventures.json
+i&i Biotech Investments,CVCA riadni clenovia,https://cvca.cz/en/category/full-members/,2026-10-26,VC?,neoverene,profil: biotech fond
+Abris Capital,CVCA riadni clenovia,https://cvca.cz/en/category/full-members/,2026-10-26,PE,neoverene,adresa Varšava
+ARX Equity Partners,CVCA aj SLOVCA,https://cvca.cz/en/category/full-members/,2026-10-26,PE,neoverene,profil: acquisitions / MBO
+Integral Capital Group,CVCA riadni clenovia,https://cvca.cz/en/category/full-members/,2026-10-26,PE,neoverene,adresa Budapešť
+Credo Ventures,CVCA riadni clenovia,https://cvca.cz/en/category/full-members/,2026-10-26,VC?,test: zaradeny (navrh agenta),data/raw/cz-credo-ventures.json
+MAM Private Equity Fund SICAV a.s.,CVCA riadni clenovia,https://cvca.cz/en/category/full-members/,2026-10-26,PE,neoverene,profil: MBO / LBO
+Enterprise Investors,CVCA aj SLOVCA,https://cvca.cz/en/category/full-members/,2026-10-26,PE,neoverene,profil: buyout; adresa Varšava
+Genesis Capital Equity s.r.o.,CVCA aj SLOVCA,https://cvca.cz/en/category/full-members/,2026-10-26,nejasne,neoverene,profil bez typu investície
+Inven Capital,CVCA riadni clenovia,https://cvca.cz/en/category/full-members/,2026-10-26,nejasne,neoverene,profil bez typu investície; tickety 2–30 mil. EUR
+Innova Capital,CVCA riadni clenovia,https://cvca.cz/en/category/full-members/,2026-10-26,PE,neoverene,profil: expansion / buyout
+Jet Investment,CVCA aj SLOVCA,https://cvca.cz/en/category/full-members/,2026-10-26,PE,neoverene,profil: buyout / growth / late-stage venture
+Mid Europa Partners,CVCA riadni clenovia,https://cvca.cz/en/category/full-members/,2026-10-26,PE,neoverene,adresa Londýn
+Nation1,CVCA riadni clenovia,https://cvca.cz/en/category/full-members/,2026-10-26,VC?,neoverene,profil: pre-seed / seed; podľa médií premenovaný na N1 (neoverené); web nation1.vc nedostupný (connection reset)
+SkyLimit Investments,CVCA riadni clenovia,https://cvca.cz/en/category/full-members/,2026-10-26,nejasne,neoverene,profil bez typu investície
+Versute Investments,CVCA riadni clenovia,https://cvca.cz/en/category/full-members/,2026-10-26,PE,neoverene,profil: growth / LBO / MBO
+V4C Investment Advisers Limited,CVCA riadni clenovia,https://cvca.cz/en/category/full-members/,2026-10-26,PE,neoverene,profil: buyouts
+Orbit Capital,CVCA riadni clenovia,https://cvca.cz/en/category/full-members/,2026-10-26,nejasne,neoverene,profil: growth equity a venture debt
+Sandberg Capital,CVCA aj SLOVCA,https://cvca.cz/en/category/full-members/,2026-10-26,PE,neoverene,profil: buy-and-build / growth
+Tilia Impact Ventures,CVCA cestny clen,https://cvca.cz/en/category/full-members/,2026-10-26,VC?,neoverene,čestný člen; profil: impact investície
+Eterus Capital,SLOVCA riadni clenovia,https://www.slovca.sk/sk/riadni-clenovia.html,2026-10-26,nejasne,neoverene,
+Fond inovácií a technológií,SLOVCA riadni clenovia,https://www.slovca.sk/sk/riadni-clenovia.html,2026-10-26,nejasne,neoverene,verejný subjekt; môže investovať cez iné fondy
+Národný holdingový fond s.r.o.,SLOVCA riadni clenovia,https://www.slovca.sk/sk/riadni-clenovia.html,2026-10-26,nejasne,neoverene,verejný fond fondov; skôr zdroj ďalších kandidátov
+Neulogy Ventures,SLOVCA riadni clenovia,https://www.slovca.sk/sk/riadni-clenovia.html,2026-10-26,VC?,test: overenie nedokoncene,sekcia News na webe obsahuje iba tweety do 2024; investíciu v okne som nenašiel ani nevylúčil
+Venture to Future Fund,SLOVCA riadni clenovia,https://www.slovca.sk/sk/riadni-clenovia.html,2026-10-26,VC?,test: zaradeny (navrh agenta),data/raw/sk-venture-to-future-fund.json
+Vision Ventures,SLOVCA riadni clenovia,https://www.slovca.sk/sk/riadni-clenovia.html,2026-10-26,VC?,test: overenie nedokoncene,web bez dátumov investícií; pozor na rovnomennú saudskú firmu Vision Ventures v agregátoroch
