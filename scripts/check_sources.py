@@ -9,6 +9,11 @@ Spustenie:
 
 Skript overuje iba to, že citácia na stránke JE. Neoveruje, či citácia
 tvrdenie PODPORUJE. To robí kontrolný agent a človek.
+
+Ak web neposiela úplný reťazec certifikátov (napr. cvca.cz), skript
+nahlási „nedostupne“ s CERTIFICATE_VERIFY_FAILED. Overovanie TLS
+nevypínaj; doplň chýbajúce medzicertifikáty do vlastného CA súboru a
+spusti skript s premennou SSL_CERT_FILE=<súbor>.
 """
 
 import argparse
@@ -38,6 +43,9 @@ def normalize(text):
 
 def html_to_text(raw):
     raw = re.sub(r"(?is)<(script|style|noscript).*?</\1>", " ", raw)
+    # Inline značky (odkaz, tučné písmo...) nerozdeľujú text, preto sa odstránia bez medzery.
+    # Inak by skript prijal citáciu „Capital , with“, ktorú v prehliadači nenájdeš.
+    raw = re.sub(r"(?i)</?(a|span|strong|b|em|i|u|small|sup|sub|abbr|mark)\b[^>]*>", "", raw)
     raw = re.sub(r"(?s)<[^>]+>", " ", raw)
     return html.unescape(raw)
 
