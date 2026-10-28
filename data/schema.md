@@ -1,4 +1,4 @@
-# Dátová schéma záznamu investora (v0.3)
+# Dátová schéma záznamu investora (v0.4)
 
 Zjednodušená verzia pre pilot. Cieľ: aby sa záznam dal prečítať a overiť
 za pár minút. Pravidlá zaradenia sú v `plan/research-plan.md`, pravidlá
@@ -40,6 +40,7 @@ Každý faktický údaj má rovnaký tvar:
 | `status` | Význam | `value` |
 |---|---|---|
 | `dolozene` | zdroj údaj priamo uvádza | vyplnená |
+| `neiste` | zdroj existuje, ale hodnota je výklad zdroja alebo je zdroj slabý | vyplnená, v `notes` čo je neisté |
 | `nedolozene` | údaj sa nenašiel | `null`, v `notes` čo som hľadal |
 | `v_rozpore` | zdroje uvádzajú rôzne hodnoty | `null`, v `evidence` sú všetky zdroje, v `notes` vysvetlenie |
 
@@ -81,9 +82,19 @@ ktorému suma platí. Pri `fund_size` sa pridá `fund_name`.
 | Pole | Popis |
 |---|---|
 | `company` | financovaná firma |
-| `date` | dátum investície alebo oznámenia (`YYYY-MM-DD` alebo `YYYY-MM`) |
-| `date_kind` | `investment` alebo `announcement` |
+| `announced` | dátum prvého doloženého oznámenia kola (`YYYY-MM-DD` alebo `YYYY-MM`), inak `null` |
+| `closed` | dátum uzavretia transakcie, iba ak ho zdroj výslovne uvádza, inak `null` |
 | `evidence` | dôkaz, v ktorom je menovaný investor aj firma |
+
+`announced` je dátum, keď investor alebo firma kolo oznámili. Ak je
+k dispozícii iba článok v médiu, použije sa dátum jeho publikovania
+a v `notes` záznamu sa uvedie, že ide o dátum článku. Dátum článku
+(`published` v dôkaze) sa nikdy nezapisuje do `closed`.
+
+**Zmeny oproti v0.3:** nový stav údaja `neiste` (pozri vyššie) a pole
+`date` s `date_kind` sa nahrádza dvomi poľami. Záznamy vo v0.3 sa neprepisujú; pri čítaní platí
+`date_kind: announcement` → `announced = date`, `closed = null` a
+`date_kind: investment` → `closed = date`, `announced = null`.
 
 Výška kola sa neeviduje. Neprezrádza, koľko investoval konkrétny investor,
 a ľahko sa zamení s `ticket_size`.
@@ -183,8 +194,8 @@ ukážku formátu.
   },
   "deals": [{
     "company": "Example Startup s.r.o.",
-    "date": "2026-03",
-    "date_kind": "announcement",
+    "announced": "2026-03",
+    "closed": null,
     "evidence": [{
       "url": "https://startup.example.net/blog/seed",
       "quote": "Kolo viedol fond Example Ventures",

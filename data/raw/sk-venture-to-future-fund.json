@@ -1,0 +1,134 @@
+{
+  "id": "sk-venture-to-future-fund",
+  "name": "Venture to Future Fund",
+  "investor_type": {
+    "value": "vc",
+    "status": "dolozene",
+    "evidence": [{
+      "url": "https://vff.sk/",
+      "quote": "Sme slovenský venture kapitálový fond so zameraním na podporu inovatívnych lokálnych podnikov.",
+      "accessed": "2026-10-26",
+      "published": null,
+      "source_type": "investor_web"
+    }],
+    "notes": ""
+  },
+  "country": {
+    "value": "SK",
+    "status": "dolozene",
+    "evidence": [{
+      "url": "https://vff.sk/",
+      "quote": "Sídlo: Venture to Future Fund, a.s., Grösslingová 44 811 09 Bratislava",
+      "accessed": "2026-10-26",
+      "published": null,
+      "source_type": "investor_web"
+    }],
+    "notes": ""
+  },
+  "website": {
+    "value": "https://vff.sk",
+    "status": "dolozene",
+    "evidence": [{
+      "url": "https://vff.sk/",
+      "quote": "Sídlo: Venture to Future Fund, a.s., Grösslingová 44 811 09 Bratislava",
+      "accessed": "2026-10-26",
+      "published": null,
+      "source_type": "investor_web"
+    }],
+    "notes": "Odkaz na web je aj na stránke člena SLOVCA."
+  },
+  "registration": {
+    "value": "IČO 52380483",
+    "status": "dolozene",
+    "evidence": [{
+      "url": "https://vff.sk/",
+      "quote": "IČO: 52380483",
+      "accessed": "2026-10-26",
+      "published": null,
+      "source_type": "investor_web"
+    }],
+    "notes": "Overené iba na webe investora, nie v obchodnom registri."
+  },
+  "sectors": {
+    "value": null,
+    "status": "nedolozene",
+    "evidence": [],
+    "notes": "Web uvádza iba „inovácie v rôznych sektoroch“, konkrétne sektory nie."
+  },
+  "stages": {
+    "value": ["late seed", "series A", "series B"],
+    "status": "dolozene",
+    "evidence": [{
+      "url": "https://vff.sk/",
+      "quote": "od neskoršieho Seed kola po Series A,B",
+      "accessed": "2026-10-26",
+      "published": null,
+      "source_type": "investor_web"
+    }],
+    "notes": ""
+  },
+  "ticket_size": {
+    "value": { "min": 1500000, "max": 2000000, "currency": "EUR", "as_of": null },
+    "status": "dolozene",
+    "evidence": [{
+      "url": "https://vff.sk/",
+      "quote": "Minimálna výška našej investície je 400tis. EUR, aj keď optimálne investujeme medzi 1,5 – 2,0 mil. EUR.",
+      "accessed": "2026-10-26",
+      "published": null,
+      "source_type": "investor_web"
+    }],
+    "notes": "Ako typickú výšku som uviedol „optimálne“ rozpätie. Minimum je 400 tis. EUR, maximum vrátane follow-on investícií podľa webu 7 mil. EUR. Web neuvádza, ku ktorému dátumu údaj platí."
+  },
+  "fund_size": {
+    "value": { "fund_name": "Venture to Future Fund", "min": 55000000, "max": 55000000, "currency": "EUR", "as_of": "2020-2026" },
+    "status": "dolozene",
+    "evidence": [{
+      "url": "https://vff.sk/",
+      "quote": "V rokoch 2020 - 2026 máme vyčlenených 55 mil. EUR",
+      "accessed": "2026-10-26",
+      "published": null,
+      "source_type": "investor_web"
+    }],
+    "notes": "Na overenie pri ručnej kontrole: zdroj hovorí o „vyčlenených“ prostriedkoch, nie priamo o veľkosti fondu. Web má aj správu „navyšuje kapitál o 15,3 milióna EUR“, ktorú som nečítal; nie je jasné, či je v 55 mil. zahrnutá."
+  },
+  "aum": {
+    "value": null,
+    "status": "nedolozene",
+    "evidence": [],
+    "notes": "Web AUM neuvádza. Súčet ani odhad z veľkosti fondu som nerobil."
+  },
+  "deals": [
+    {
+      "company": "NETGRIF",
+      "date": "2024-11-12",
+      "date_kind": "announcement",
+      "evidence": [{
+        "url": "https://vff.sk/novinky/slovenska-platforma-netgrif-na-automatizaciu-biznis-aplikacii-ziskala-investiciu-vo-vyske-1-milion-eur-mieri-do-sveta-32",
+        "quote": "Kapitálovo do nej vstupujú dvaja renomovaní hráči na slovenskom investičnom trhu, fond rizikového kapitálu Venture to Future Fund a IT spoločnosť Soitron.",
+        "accessed": "2026-10-26",
+        "published": "2024-11-12",
+        "source_type": "investor_web"
+      }]
+    },
+    {
+      "company": "Patron GO",
+      "date": "2024-08-12",
+      "date_kind": "announcement",
+      "evidence": [{
+        "url": "https://vff.sk/novinky/cesky-startup-patron-go-ziskava-investiciu-v-hodnote-1-milion-eur-30",
+        "quote": "Slovenský fond Venture to Future Fund sa vo štvrtom investičnom kole pridáva k ďalším investorom",
+        "accessed": "2026-10-26",
+        "published": "2024-08-14",
+        "source_type": "investor_web"
+      }]
+    }
+  ],
+  "inclusion": {
+    "decision": "zaradeny",
+    "rule": "Z1+Z2+Z3",
+    "reason": "Web s IČO a sídlom v Bratislave, investícia do NETGRIF oznámená 12. 11. 2024, čo je v okne od 26. 10. 2024. Investícia do Patron GO (8/2024) je mimo okna a slúži iba ako história.",
+    "decided_by": "agent"
+  },
+  "notes": "Jediná doložená investícia v okne je iba 17 dní po jeho začiatku a pochádza z webu investora. Pri 12-mesačnom okne by fond nesplnil Z3. Novšie správy na webe (Terratico, SEC Technologies) sú portfóliové príbehy, nie oznámenia investícií. Kandidát zo zoznamu riadnych členov SLOVCA.",
+  "updated": "2026-10-26"
+}

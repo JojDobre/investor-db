@@ -1,0 +1,138 @@
+{
+  "id": "cz-depo-ventures",
+  "name": "DEPO Ventures",
+  "investor_type": {
+    "value": "vc",
+    "status": "dolozene",
+    "evidence": [{
+      "url": "https://depoventures.cz/novinky",
+      "quote": "DEPO Ventures je venture kapitálová skupina investující do raných startupů z regionu střední a východní Evropy.",
+      "accessed": "2026-10-26",
+      "published": null,
+      "source_type": "investor_web"
+    }],
+    "notes": "Skupina prevádzkuje aj klub andělských investorov (DEPO Angels). Investíciu nižšie robil fond (zdroj: „Czech VC fund DEPO Ventures“), nie klub."
+  },
+  "country": {
+    "value": "CZ",
+    "status": "dolozene",
+    "evidence": [{
+      "url": "https://depoventures.cz/kontakt",
+      "quote": "Plynární 10 170 00, Praha 7 Česká republika",
+      "accessed": "2026-10-26",
+      "published": null,
+      "source_type": "investor_web"
+    }],
+    "notes": ""
+  },
+  "website": {
+    "value": "https://depoventures.cz",
+    "status": "dolozene",
+    "evidence": [{
+      "url": "https://depoventures.cz/kontakt",
+      "quote": "DEPO VENTURES, s.r.o. IČ: 04753101",
+      "accessed": "2026-10-26",
+      "published": null,
+      "source_type": "investor_web"
+    }],
+    "notes": "Web uvádza fakturačné údaje firmy. Anglická verzia: depoventures.com."
+  },
+  "registration": {
+    "value": "IČO 04753101",
+    "status": "dolozene",
+    "evidence": [{
+      "url": "https://depoventures.cz/kontakt",
+      "quote": "DEPO VENTURES, s.r.o. IČ: 04753101",
+      "accessed": "2026-10-26",
+      "published": null,
+      "source_type": "investor_web"
+    }],
+    "notes": "Overené iba na webe investora, nie v obchodnom registri."
+  },
+  "sectors": {
+    "value": ["obrana", "vesmír", "fintech", "průmysl 4.0", "energetika"],
+    "status": "dolozene",
+    "evidence": [{
+      "url": "https://depoventures.cz/",
+      "quote": "Sektory Obrana, Vesmír, FinTech, Průmysl 4.0, Energetika",
+      "accessed": "2026-10-26",
+      "published": null,
+      "source_type": "investor_web"
+    }],
+    "notes": ""
+  },
+  "stages": {
+    "value": ["inception", "pre-seed"],
+    "status": "dolozene",
+    "evidence": [{
+      "url": "https://depoventures.cz/",
+      "quote": "Fáze Inception & Pre-seed",
+      "accessed": "2026-10-26",
+      "published": null,
+      "source_type": "investor_web"
+    }],
+    "notes": ""
+  },
+  "ticket_size": {
+    "value": null,
+    "status": "v_rozpore",
+    "evidence": [
+      {
+        "url": "https://depoventures.cz/",
+        "quote": "Investice €250K - 500K",
+        "accessed": "2026-10-26",
+        "published": null,
+        "source_type": "investor_web"
+      },
+      {
+        "url": "https://cvca.cz/en/category/full-members/",
+        "quote": "Preferred Ammount of Investment 50 000 – 300 000 EUR",
+        "accessed": "2026-10-26",
+        "published": "2023-01-12",
+        "source_type": "other"
+      }
+    ],
+    "notes": "Web investora: 250–500 tis. EUR, bez dátumu. Profil na stránke CVCA: 50–300 tis. EUR; dátum 12. 1. 2023 je pri profile uvedený, ale nie je jasné, či ide o dátum aktualizácie. Rozdiel môže súvisieť s novým fondom, nerozhodol som."
+  },
+  "fund_size": {
+    "value": null,
+    "status": "nedolozene",
+    "evidence": [],
+    "notes": "Veľkosť aktuálneho fondu som na webe nenašiel. Hľadané: domovská stránka, O nás, Aktuality."
+  },
+  "aum": {
+    "value": null,
+    "status": "nedolozene",
+    "evidence": [],
+    "notes": "Profil CVCA (2023) uvádza „Volume of Funds Managed 5,5 mil. EUR“, ide však iba o zdroj typu other a je starý. Web uvádza „9M€ Investovaný kapitál“, čo je investovaný kapitál, nie AUM. Ani jeden údaj som nepoužil."
+  },
+  "deals": [{
+    "company": "Tapaya",
+    "date": "2026-04",
+    "date_kind": "announcement",
+    "evidence": [
+      {
+        "url": "https://www.vestbee.com/insights/articles/tapaya-secures-1-m",
+        "quote": "has raised €1 million in a pre-seed round led by Passion Capital and co-led by Depo Ventures",
+        "accessed": "2026-10-26",
+        "published": "2026-04-29",
+        "source_type": "media"
+      },
+      {
+        "url": "https://depoventures.cz/novinky/turning-any-smartphone-into-a-payment-terminal-czech-fintech-tapaya-has-raised-eur-1-million",
+        "quote": "The round was led by Czech VC fund DEPO Ventures and the UK’s Passion Capital",
+        "accessed": "2026-10-26",
+        "published": null,
+        "source_type": "investor_web"
+      }
+    ]
+  }],
+  "inclusion": {
+    "decision": "zaradeny",
+    "rule": "Z1+Z2+Z3",
+    "reason": "Web s IČO a adresou v Prahe, sám sa označuje za VC skupinu, spoluviedol pre-seed kolo Tapaya oznámené v apríli 2026 (článok Vestbee z 29. 4. 2026). Presný dátum investície nie je známy.",
+    "decided_by": "agent"
+  },
+  "notes": "Zdroje sa líšia v role: Vestbee píše „led by Passion Capital and co-led by Depo Ventures“, web DEPO „led by ... DEPO Ventures and ... Passion Capital“. Pre zaradenie to nie je podstatné, rola sa v schéme neeviduje. Kandidát zo zoznamu riadnych členov CVCA.",
+  "updated": "2026-10-26"
+}

@@ -1,0 +1,102 @@
+{
+  "id": "cz-credo-ventures",
+  "name": "Credo Ventures",
+  "investor_type": {
+    "value": "vc",
+    "status": "dolozene",
+    "evidence": [{
+      "url": "https://www.credoventures.com/",
+      "quote": "The fund of choice for CEE founders around the world building generational companies.",
+      "accessed": "2026-10-26",
+      "published": null,
+      "source_type": "investor_web"
+    }],
+    "notes": "Web sa označuje za fond pre zakladateľov (startupy), slovo „venture capital“ v citácii nie je. Typ VC vyplýva aj z oznámenia investície nižšie."
+  },
+  "country": {
+    "value": "CZ",
+    "status": "dolozene",
+    "evidence": [{
+      "url": "https://www.credoventures.com/",
+      "quote": "Karlovo Náměstí 10 120 00, Prague Czech Republic",
+      "accessed": "2026-10-26",
+      "published": null,
+      "source_type": "investor_web"
+    }],
+    "notes": "Web uvádza aj kanceláriu v Krakove (Poľsko). Ako krajinu sídla som uviedol CZ podľa prvej uvedenej adresy; právnu osobu a sídlo v registri som neoveroval."
+  },
+  "website": {
+    "value": "https://www.credoventures.com",
+    "status": "dolozene",
+    "evidence": [{
+      "url": "https://www.credoventures.com/",
+      "quote": "©2026 Credo Ventures.",
+      "accessed": "2026-10-26",
+      "published": null,
+      "source_type": "investor_web"
+    }],
+    "notes": ""
+  },
+  "registration": {
+    "value": null,
+    "status": "nedolozene",
+    "evidence": [],
+    "notes": "IČO na webe nie je. Obchodný register som nehľadal."
+  },
+  "sectors": {
+    "value": null,
+    "status": "nedolozene",
+    "evidence": [],
+    "notes": "Web sektory neuvádza. Profil CVCA (z roku 2020) uvádza „IT & internet, mobile communication“, je to však starý zdroj typu other."
+  },
+  "stages": {
+    "value": ["pre-seed", "a neskôr"],
+    "status": "dolozene",
+    "evidence": [{
+      "url": "https://www.credoventures.com/",
+      "quote": "Pre-seed — Onwards. Leading rounds since ‘09.",
+      "accessed": "2026-10-26",
+      "published": null,
+      "source_type": "investor_web"
+    }],
+    "notes": "„Onwards“ som preložil ako „a neskôr“; konkrétne neskoršie fázy web neuvádza."
+  },
+  "ticket_size": {
+    "value": null,
+    "status": "nedolozene",
+    "evidence": [],
+    "notes": "Web výšku investície neuvádza. Profil CVCA (2020): „50k EUR – 10M EUR“, starý zdroj typu other, nepoužité."
+  },
+  "fund_size": {
+    "value": null,
+    "status": "nedolozene",
+    "evidence": [],
+    "notes": "Na webe som veľkosť fondu nenašiel. Mediálne správy o fondoch som v tomto teste nehľadal."
+  },
+  "aum": {
+    "value": null,
+    "status": "nedolozene",
+    "evidence": [],
+    "notes": "Profil CVCA (2020): „Volume of Funds Managed EUR 170 million“, starý zdroj typu other, nepoužité."
+  },
+  "deals": [{
+    "company": "Supernova",
+    "date": "2025-09-30",
+    "date_kind": "announcement",
+    "evidence": [{
+      "url": "https://tech.eu/2025/09/30/supernova-raises-92-million-series-a-to-bring-ai-powered-vibe-coding-to-enterprise-product-teams/",
+      "quote": "The round was led by Taiwania Capital , with participation from J&T Ventures, Reflex Capital, Kaya, Credo Ventures, EQT Ventures, Wing VC and Y Combinator.",
+      "accessed": "2026-10-26",
+      "published": "2025-09-30",
+      "source_type": "media"
+    }]
+  }],
+  "inclusion": {
+    "decision": "zaradeny",
+    "rule": "Z1+Z2+Z3",
+    "reason": "Oficiálny web s adresou v Prahe, účasť v Series A kole Supernova oznámenom 30. 9. 2025 (Tech.eu).",
+    "decided_by": "agent"
+  },
+  "notes": "Newsroom Credo odkazuje aj na Resistant AI (The Recursive, 14. 10. 2025) s označením „Led by Credo“. Stiahnutý text článku však Credo nespomína, preto som ho ako dôkaz nepoužil. Credo mohol byť v kole Supernova existujúci investor (follow-on); aj to je investícia. Kandidát zo zoznamu riadnych členov CVCA.",
+  "updated": "2026-10-26"
+}

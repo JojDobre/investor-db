@@ -1,6 +1,6 @@
 # Plán pilotu: databáza investorov
 
-**Stav:** návrh v2, čaká na schválenie · **Dátum:** 2026-10-25
+**Stav:** návrh v2, čaká na schválenie · **Dátum:** 2026-10-25, upravené 2026-10-26
 
 Pravidlá pre AI agentov sú v `CLAUDE.md`, štruktúra záznamu v
 `data/schema.md`. Tento plán ich neopakuje.
@@ -19,7 +19,10 @@ Cieľom nie je hotová databáza, ale overený postup a poctivé čísla.
 
 ## 2. Rozsah pilotu
 
-**Segment:** VC fondy so sídlom v Česku a na Slovensku, **25 investorov**.
+**Segment:** VC fondy so sídlom v Česku a na Slovensku, **najviac 25 investorov**.
+Číslo 25 nie je cieľ za každú cenu: radšej menej záznamov, ktoré spĺňajú
+všetky pravidlá, ako doplnenie poradcami alebo neaktívnymi fondmi. Ak sa
+vzorka nenaplní, v README vysvetlím prečo.
 
 Prečo tento segment:
 
@@ -46,7 +49,7 @@ Identifikátory sa uvádzajú v poli `inclusion.rule`.
 |---|---|
 | **Z1** | Identita je jasná: oficiálny web alebo záznam v obchodnom registri. |
 | **Z2** | Ide o VC investora so sídlom v CZ alebo SK (podľa webu alebo registra). |
-| **Z3** | Má aspoň jednu doloženú investíciu za posledných 24 mesiacov (od 2024-10-25). Dôkaz musí menovať investora aj financovanú firmu, napríklad oznámenie investora, oznámenie firmy alebo článok v médiu. |
+| **Z3** | Má aspoň jednu doloženú investíciu, ktorej **oznámenie** alebo **uzavretie** spadá do posledných 24 mesiacov pred dátumom kontroly (pri kontrole 2026-10-26: od 2024-10-26 do 2026-10-26). Dôkaz musí menovať investora aj financovanú firmu a jednoznačne potvrdzovať účasť investora, napríklad oznámenie investora, oznámenie firmy alebo článok v médiu. |
 
 **Vyradiť**, ak platí niečo z tohto:
 
@@ -72,6 +75,23 @@ dalo posúdiť, či je hranica rozumná.
 
 Všeobecné tvrdenie na webe („investujeme do seed fáz“) dokladá zameranie,
 nie investičnú aktivitu. Aktivitu dokladá iba konkrétna investícia.
+
+**Ktorý dátum rozhoduje pri Z3.** Rozhoduje dátum **oznámenia kola**, ak
+dôveryhodný zdroj jednoznačne potvrdzuje účasť investora. Dátum uzavretia
+transakcie sa verejne uvádza zriedka, preto by kritérium podľa neho
+vyradilo väčšinu investorov. Ak je známy dátum uzavretia a spadá do
+okna, Z3 je splnené aj vtedy, keď oznámenie prišlo neskôr alebo chýba.
+
+- Dátum oznámenia (`announced`) a dátum uzavretia (`closed`) sa evidujú
+  oddelene (`data/schema.md`, v0.4). Ak dátum nie je známy, je `null`.
+- Dátum publikovania článku nie je dátum transakcie. Ak je k dispozícii
+  iba článok v médiu, jeho dátum sa použije ako dátum oznámenia a zapíše
+  sa to do poznámky.
+- Ak zdroj neuvádza žiadny dátum (napr. portfólio na webe), Z3 sa ním
+  doložiť nedá (pravidlo N2).
+- Ak je známy iba mesiac a ide o mesiac začiatku alebo konca okna
+  (napr. `2024-10`), nedá sa rozhodnúť, či je dátum v okne. Prípad je
+  nejasný (N2), kým sa nenájde presný dátum.
 
 ## 4. Postup
 
@@ -102,23 +122,31 @@ s citáciou ku každému údaju, alebo nechá pole prázdne. Uloží ho do
 Pokyn najprv vyskúšam na 3 kandidátoch, výstup skontrolujem, pokyn
 upravím a až potom ho spustím na ostatných. Každú zmenu pokynu si zapíšem.
 
+Prvý test (2026-10-26) prebehol v hlavnej konverzácii, nie cez
+subagenta. Pokyny v `scripts/prompts/` vznikli podľa tohto testu.
+
 ### Krok 3: Kontrola (AI workflow 2 + skript)
 - **Skript** `scripts/check_sources.py` overí pri každom dôkaze, či URL
-  funguje a či sa citácia na stránke naozaj nachádza. Tým zachytí
-  vymyslené citácie.
-- **Kontrolný agent** v novej konverzácii dostane iba tvrdenia a zdroje,
-  nie zdôvodnenie prvého agenta. Pri každom tvrdení posúdi, či ho zdroj
+  funguje a či sa citácia na stránke naozaj nachádza. Zachytí vymyslené
+  alebo pozmenené citácie a nedostupné zdroje. Neoverí, či citácia
+  tvrdenie podporuje. PDF označí na ručnú kontrolu.
+- **Kontrolný agent** (`scripts/prompts/kontrola.md`) v novej konverzácii dostane záznam,
+  nie konverzáciu prvého agenta. V teste 2026-10-26 videl aj pole `notes`
+  so zdôvodnením AI, takže nezávislosť bola iba čiastočná. Pri každom tvrdení posúdi, či ho zdroj
   podporuje (áno / čiastočne / nie). Nič nemení, iba hlási.
 
 ### Krok 4: Ručná kontrola
-Skontrolujem všetkých 25 záznamov. Pri každom údaji najprv otvorím zdroj
+Skontrolujem všetky záznamy. Pri každom údaji najprv otvorím zdroj
 a až potom porovnám s hodnotou od AI, aby som sa nenechal ovplyvniť.
 Verdikty zapíšem do `results/review.csv`, opravené záznamy uložím do
 `data/verified/`. Pri niekoľkých prázdnych poliach skúsim údaj nájsť sám,
 aby som vedel, či AI niečo prehliadla.
 
 ### Krok 5: Vyhodnotenie
-Skript `scripts/summarize_review.py` spočíta výsledky z `review.csv`.
+Skript `scripts/summarize_review.py` spočíta výsledky z `results/review.csv`.
+Vyplnené údaje vykazuje ako úplnú podporu, čiastočnú podporu, bez podpory
+a nesprávne (neoveriteľné sú mimo menovateľa). Prázdne polia vykazuje
+zvlášť: údaj neexistuje, údaj AI prehliadla, nekontrolované.
 Zhrnutie a poučenia zapíšem do `results/` a do README.
 
 ## 5. Ktoré údaje zbierať
@@ -159,8 +187,8 @@ iba ako percentá.
 
 Pilot považujem za úspešný, ak:
 
-- žiadny zaradený subjekt nie je poradca ani platforma a aspoň 24 z 25
-  zaradených sú skutoční aktívni investori,
+- žiadny zaradený subjekt nie je poradca ani platforma a nanajvýš jeden
+  zaradený subjekt nie je aktívny investor,
 - žiadny vymyslený zdroj sa nedostane do `data/verified/`,
 - povinné údaje sú takmer bez chýb.
 
@@ -198,7 +226,7 @@ kontroly, nie AI. Pilot ukáže, či je to pravda.
 | Staré údaje | pri finančných údajoch zapisujem, ku ktorému dátumu platia |
 | Vzorka obsahuje iba známe fondy | kandidáti z viacerých zdrojov, výber vysvetlený |
 | Nestihnem to do 30. 10. | radšej menej záznamov poriadne skontrolovaných ako 25 neskontrolovaných; zmenšenie uvediem v README |
-| Weby nie sú dostupné z cloudového prostredia | zber spúšťam lokálne v Claude Code (z cloudu boli niektoré weby zablokované) |
+| Weby nie sú dostupné alebo zlyhá TLS | sieťové pravidlá prostredia boli upravené; `cvca.cz` neposiela úplný reťazec certifikátov, preto sa pri sťahovaní pridávajú chýbajúce medzicertifikáty Let's Encrypt (overovanie TLS sa nevypína) |
 
 ## 10. Možné budúce rozšírenia
 
@@ -219,6 +247,8 @@ Vedome ich v pilote nerobím. Uvádzam ich iba ako smer, nie ako plán:
 
 1. Segment CZ/SK VC: potvrdený, podmienkou je dostatok investorov
    s verejnými údajmi.
-2. Zoznamy CVCA a SLOVCA: predbežne verejné, počet VC investorov v nich
-   pravdepodobne nestačí. Treba otvoriť priamo (`plan/zdroje-kandidatov.md`).
-3. Schéma: zjednodušená na v0.3.
+2. Zoznamy CVCA a SLOVCA: overené 2026-10-26, sú verejné. Spolu 33
+   kandidátov, z toho predbežne 10 VC a 7 nejasných
+   (`data/raw/candidates.csv`). Na 25 VC investorov to pravdepodobne
+   nestačí, treba doplniť ďalšie zdroje.
+3. Schéma: zjednodušená na v0.3, v0.4 oddeľuje dátum oznámenia a uzavretia a pridáva stav `neiste`. Záznamy z testu zostávajú vo v0.3.
